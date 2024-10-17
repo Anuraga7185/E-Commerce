@@ -27,6 +27,7 @@ jobs:
       - name: Build UserService
         run: |
           cd userservice # Navigate to the UserService directory
+          chmod +x mvnw
           ./mvnw clean install # Build and run tests for UserService
 
       # Build and test the ProductService
