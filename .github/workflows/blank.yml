@@ -45,7 +45,7 @@ jobs:
       # Build Docker image for UserService
       - name: Build Docker image for UserService
         run: |
-          cd UserService # Navigate to UserService
+          cd userservice # Navigate to UserService
           docker build -t arathore240/userservice-app:latest .
 
       # Push Docker image for UserService
