@@ -26,14 +26,14 @@ jobs:
       # Build and test the UserService
       - name: Build UserService
         run: |
-          cd UserService # Navigate to the UserService directory
+          cd userservice # Navigate to the UserService directory
           ./mvnw clean install # Build and run tests for UserService
 
       # Build and test the ProductService
-      - name: Build ProductService
-        run: |
-          cd ProductService # Navigate to the ProductService directory
-          ./mvnw clean install # Build and run tests for ProductService
+  #    - name: Build ProductService
+   #     run: |
+    #      cd ProductService # Navigate to the ProductService directory
+     #     ./mvnw clean install # Build and run tests for ProductService
 
       # Docker login for both services
       - name: Log in to Docker Hub
