@@ -17,11 +17,11 @@ jobs:
         uses: actions/checkout@v3
 
       # Set up Java for Spring Boot services (UserService and ProductService)
-      - name: Set up JDK 17
+      - name: Set up JDK 21
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
 
       # Build and test the UserService
       - name: Build UserService
@@ -54,12 +54,12 @@ jobs:
           docker push arathore240/userservice-app:latest
 
       # Build Docker image for ProductService
-      - name: Build Docker image for ProductService
-        run: |
-          cd ProductService # Navigate to ProductService
-          docker build -t arathore240/productservice-app:latest .
+  #    - name: Build Docker image for ProductService
+   #     run: |
+    #      cd ProductService # Navigate to ProductService
+     #     docker build -t arathore240/productservice-app:latest .
 
       # Push Docker image for ProductService
-      - name: Push Docker image for ProductService
-        run: |
-          docker push arathore240/productservice-app:latest
+      #- name: Push Docker image for ProductService
+       # run: |
+        #  docker push arathore240/productservice-app:latest
