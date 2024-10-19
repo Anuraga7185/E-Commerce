@@ -7,5 +7,8 @@ WORKDIR /app
 # Copy the packaged application
 COPY target/userservice-0.0.1-SNAPSHOT.jar userservice.jar
 
+# Expose the service port
+EXPOSE 8080
+
 # Run the application
 ENTRYPOINT ["java", "-jar", "userservice.jar"]
